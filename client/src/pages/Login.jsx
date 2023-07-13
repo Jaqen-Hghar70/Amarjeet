@@ -48,7 +48,7 @@ export default function Login() {
                     </div>
                     <div className="checkRegister">
                        <Link to='/register' variant="body2">
-					      Not a user? Register
+					      Not a Administrator? Register
 				       </Link>
                     </div>
                 </form>

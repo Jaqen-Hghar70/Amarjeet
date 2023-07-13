@@ -1,18 +1,18 @@
 # Waste Management App
 
-Application to save information on waste generated through a form. The user accesses a main view where he / she must enter information 
-on the amount and type of waste, as well as personal information.
+Application to save information on waste generated through a form. The user accesses a main view where he / she can file a complaint and fill personal information as well.
 
 Then, the administrator can log in and access the Admin view, where all the tickets with information about the waste generated can be found 
-and can be filtered by date and/or by type of waste. Also, the administrator can delete tickets or update them.
+and can be filtered by date of the ticket raised/created . Also, the administrator can delete tickets (only if the status of the ticket is Done) or update the status of the ticket from pending to done.
 
-The application does not have a registration page yet, therefore the administrator must manually create a username and password in the database 
+The application have a registration page but not for users , only for administrator  
 in order to access the Admin page. 
 
 It contains the following pages:
 
   - Home
   - Login / Sign In
+  - Register / Sign up
   - Admin
 
 ## Technologies used
@@ -49,9 +49,5 @@ This project requires the following dependecies:
     "timeago.js": "^4.0.2"
     
 
-To install the project, just download it directly from terminal with "git clone https://github.com/JEDolce/waste-management.git", 
-and then run npm install or yarn add. 
 
-After installing the project you'll need to create the dabatabase on MongoDB, and set the environmental variables MONGO_URI with your MongoDB key, 
-NODE_ENV and PORT on the server side.
 
