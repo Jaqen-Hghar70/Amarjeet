@@ -13,7 +13,7 @@ export default function Home() {
     };
 
     return (
-        <div className='container'>
+        <div className='homeContainer'>
             <div className="Box">
                <div className="box1">
                    <h2>About Us</h2>

@@ -30,7 +30,7 @@ export default function Navbar() {
                 
                     <div className='logoImg'>
                     <Link to='/'>
-                        <img src="/src/logo.png" alt="" />
+                        <img src="/src/images/logo.png" alt="" />
                         </Link>
                     </div>
                 

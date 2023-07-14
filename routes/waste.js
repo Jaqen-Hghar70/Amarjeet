@@ -25,6 +25,16 @@ router.get('/', async (req, res) => {
     }
 });
 
+// GET ONE WASTE
+router.get('/find/:id', async (req, res) => {
+    try {
+        const waste = await Waste.findById(req.params.id);
+        res.status(200).json(waste);
+    } catch (error) {
+        res.status(500).json(error);
+    }
+});
+
 // DELETE
 router.delete('/:id', async (req, res) => {
     try {
@@ -35,15 +45,6 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// GET ONE WASTE
-router.get('/find/:id', async (req, res) => {
-    try {
-        const waste = await Waste.findById(req.params.id);
-        res.status(200).json(waste);
-    } catch (error) {
-        res.status(500).json(error);
-    }
-});
 
 // UPDATE
 router.put('/:id', async (req, res) => {

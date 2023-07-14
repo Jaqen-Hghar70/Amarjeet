@@ -32,8 +32,8 @@ export default function Register() {
 
     return (
         <div>
-            <div className='container'>
-                <div className="registerContainer">
+            <div className='registerContainer'>
+                <div className="registerForm">
                 <form action="" onSubmit={handleSubmit}>
                     <h2>Sign up</h2>
                     <div className="inputContainer">

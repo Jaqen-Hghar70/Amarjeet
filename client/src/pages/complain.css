@@ -10,7 +10,7 @@
 
 .complainContainer::before {
     content: "";
-    background-image: url('/src/bgtrial3.png');
+    background-image: url('/src/images/complain_bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
