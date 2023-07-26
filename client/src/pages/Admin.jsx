@@ -122,13 +122,23 @@ export default function Admin() {
         }
     };
 
-    const handleClick = async (id) => {
+    const handleClick = async (id,email,name,type,weight) => {
         try {
             console.log(id);
             const res = await axios.put(`http://localhost:4000/api/waste/${id}`,
             {color: 'green',status: 'Done'}, {new: true}
             );
             setcheck(!check);
+            // send mail
+            try {
+                // passing info by query 
+                // url is upto mail , from ? query started in key value form
+                axios.post(`http://localhost:4000/api/waste/mail?key1=${email}&key2=${name}&key3=${type}&key4=${weight}`);
+                console.log("Maailll seent");
+                console.log("email :",email);
+            } catch (err) {
+                console.log(err);
+            }
 
         } catch (err) {
             console.log(err);
@@ -174,7 +184,7 @@ export default function Admin() {
                             <p className='address'><b>Address : </b>{item.address}</p>
                             <div className="btns">
                             <button className="statusButton" 
-                            onClick={()=> handleClick(item._id)} 
+                            onClick={()=> handleClick(item._id,item.email,item.name,item.type,item.quantity)} 
                             style={{backgroundColor: `${item.color}`}}>{item.status}</button>
                             <button className='deleteButton' 
                             onClick={() => handleDelete(item._id)}>Delete</button>
