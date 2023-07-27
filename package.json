@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "index": "npm start",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run index\" \"npm run client\""
   },
   "author": "JEDolce",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",

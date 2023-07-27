@@ -29,19 +29,6 @@
     /* border: 1px solid red; */
 }
 
-.inputContainer::before {
-    content: "";
-    background-image: url('/src/Untitled design.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.8;
-    z-index: -1;
-}
 
 .inputContainer input {
     width: 93%;
