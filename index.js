@@ -61,20 +61,28 @@ app.use("/api/auth", authRoute);
 // if (process.env.NODE_ENV === 'production') {
 //     app.use(express.static(path.join(__dirname, './client/build')))
 
-//     app.use('*', (req, res) => {
-//         res.sendFile(
-//             path.resolve(__dirname, './', 'client', 'build', 'index.html')
-//         )
-//     })
+    // app.use('*', (req, res) => {
+    //     res.sendFile(
+    //         path.resolve(__dirname, './', 'client', 'build', 'index.html')
+    //     )
+    // })
 // } else {
 //     app.get('/', (req, res) => {
 //         res.send('Please set to production')
 //     })
 // };
 
-// Server start
-// const http = require('http'); 
-// const server = http.createServer(app); server.listen(port);
+app.use(express.static(path.join(__dirname, './client/build')));
+app.use('*', (req, res) => {
+    res.sendFile(
+        path.resolve(__dirname, './', 'client', 'build', 'index.html')
+    ),
+    function(err) {
+        res.status(500).send(err);
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`Backend server is running on port ${port}`);
 });
