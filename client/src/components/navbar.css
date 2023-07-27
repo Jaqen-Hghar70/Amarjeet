@@ -26,8 +26,8 @@
    width: 30%;
    display: flex;
    align-items: center;
-   justify-content: start;
-   /* border : 2px solid red; */
+   justify-content: flex-start;
+   border : 2px solid red;
 }
 
 .logoImg  img {
@@ -36,7 +36,7 @@
    justify-content: center;
     height: 64px;
     padding-bottom: 0px;
-    /* border: red; */
+    border: red;
 }
 .titleContainer {
     width: 30%;
@@ -59,7 +59,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     /* margin-right: 30px; */
     /* border : 2px solid red; */
 } 

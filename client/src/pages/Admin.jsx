@@ -28,7 +28,7 @@ export default function Admin() {
     useEffect(() => {
         const fetchWaste = async () => {
             try {
-                const res = await axios.get('http://localhost:4000/api/waste'); 
+                const res = await axios.get('/api/waste'); 
                 setWaste(res.data);
                 setAllWaste(res.data);
             } catch (err) { }
@@ -108,9 +108,9 @@ export default function Admin() {
 
         try {
             console.log(id);
-            const res = await axios.get(`http://localhost:4000/api/waste//find/${id}`); 
+            const res = await axios.get(`/api/waste//find/${id}`); 
             if(res.data.status == 'Done') {
-                const res = await axios.delete(`http://localhost:4000/api/waste/${id}`);
+                const res = await axios.delete(`/api/waste/${id}`);
                 setcheck(!check);
             }
             else {
@@ -125,7 +125,7 @@ export default function Admin() {
     const handleClick = async (id,email,name,type,weight) => {
         try {
             console.log(id);
-            const res = await axios.put(`http://localhost:4000/api/waste/${id}`,
+            const res = await axios.put(`/api/waste/${id}`,
             {color: 'green',status: 'Done'}, {new: true}
             );
             setcheck(!check);
@@ -133,7 +133,7 @@ export default function Admin() {
             try {
                 // passing info by query 
                 // url is upto mail , from ? query started in key value form
-                axios.post(`http://localhost:4000/api/waste/mail?key1=${email}&key2=${name}&key3=${type}&key4=${weight}`);
+                axios.post(`/api/waste/mail?key1=${email}&key2=${name}&key3=${type}&key4=${weight}`);
                 console.log("Maailll seent");
                 console.log("email :",email);
             } catch (err) {

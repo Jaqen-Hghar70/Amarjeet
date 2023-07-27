@@ -31,7 +31,7 @@ export default function Navbar() {
                     <div className='logoImg'>
                     <Link to='/'>
                         <img src="/src/images/logo.png" alt="" />
-                        </Link>
+                    </Link>
                     </div>
                 
                 <div className="titleContainer">

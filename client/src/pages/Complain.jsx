@@ -30,7 +30,7 @@ export default function Complain() {
 
         try {
             console.log("Hi");
-            await axios.post('http://localhost:4000/api/waste', postWaste);
+            await axios.post('/api/waste', postWaste);
             window.location.reload();
         } catch (error) {
             console.log(error.response.data);
