@@ -3,6 +3,7 @@ import './navbar.css';
 import { Link , useNavigate} from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { logoutCall } from '../apiCalls';
+import Logo from "../images/logo.png"
 
 
 export default function Navbar() {
@@ -30,7 +31,7 @@ export default function Navbar() {
                 
                     <div className='logoImg'>
                     <Link to='/'>
-                        <img src="/src/images/logo.png" alt="" />
+                    <img src={Logo} alt="logo"/>
                     </Link>
                     </div>
                 
