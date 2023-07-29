@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm start\" \"npm run client\" "
   },
   "author": "JEDolce",
   "license": "ISC",

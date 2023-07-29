@@ -11,7 +11,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import Navbar from './components/Navbar';
+import Navbar from './pages/Navbar';
 import { AuthContext } from './context/AuthContext';
 import Footer from './components/Footer';
 
