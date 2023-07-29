@@ -22,7 +22,7 @@ export default function Register() {
 
             e.preventDefault();
             console.log("Inside frontend route");
-            await axios.post("/api/auth/register", newUser);
+            await axios.post("http://localhost:4000/api/auth/register", newUser);
             navigate('/login');
 
         }catch(err) {

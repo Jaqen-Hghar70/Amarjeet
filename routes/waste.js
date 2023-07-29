@@ -63,7 +63,7 @@ router.put('/:id', async (req, res) => {
 
 // Send mail
 router.post('/mail',(req,res) => {
-    // console.log(req.query);
+    console.log(req.query);
      let config = {
         service : 'gmail',
         auth : {
