@@ -9,26 +9,20 @@ export default function Modal({ setOpenModal }) {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
-        <div className="titleCloseBtn">
-          {/* <button
-            onClick={() => {
-              setOpenModal(false);
-            }}
-          >
-            X
-          </button> */}
+        {/* <div className="titleCloseBtn">
            <MdCancel
             className="loginCancel" 
             onClick={(e)=>{
                 setOpenModal(false);
             }}
             />
-        </div>
+        </div> */}
         <div className="title">
           <h1>Success</h1> 
           <AiFillCheckCircle className="titleSuccess"/>
         </div>
         <div className="body">
+            <h3>Thanking You !</h3>
           <p>We assure you that your complaint will be taken seriously and addressed promptly!</p>
         </div>
         <div className="down">
