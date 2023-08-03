@@ -29,7 +29,7 @@ mongoose.connect(process.env.MONGO_URL, {
     
 // Middlewares
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));     // Aceptar datos de formulario sencillo
+app.use(express.urlencoded({ extended: true }));    
 app.use(cors());
 app.use(morgan("common"));
 
