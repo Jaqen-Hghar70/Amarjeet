@@ -8,6 +8,7 @@ and can be filtered by date of the ticket raised/created . Also, the administrat
 The application have a registration page but not for users , only for administrator  
 in order to access the Admin page. 
 
+Deployed Link:- https://waste-management-system-507g.onrender.com/
 It contains the following pages:
 
   - Home
