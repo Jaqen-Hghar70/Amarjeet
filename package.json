@@ -8,7 +8,7 @@
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm start\" \"npm run client\" "
   },
-  "author": "JEDolce",
+  "author": "amarjeet",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.0",
